@@ -91,7 +91,7 @@ FROM subway_delays_staging
 GROUP BY Reporting_Category, Subcategory
 ORDER BY total_incidents DESC;
 
--- Monthly incidents sorted descending: Jan was the highest (6.9k)
+-- Monthly incidents sorted descending: Jan was the highest (6.1k)
 SELECT DATE_FORMAT(Month, '%Y-%m') AS Month_Formatted, SUM(Incidents) AS total_incidents
 FROM subway_delays_staging
 GROUP BY Month_Formatted
